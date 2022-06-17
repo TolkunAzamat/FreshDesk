@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/bottom_btn.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/edit.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/exit.xml" value="0.176" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_back.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_hide.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_key.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_login.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_logo.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_reports.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_reportscl.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_request.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_resource_statistics.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_second_splash.xml" value="0.1715" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_statisticscl.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/request_btn.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/statistic_btn.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/activity_login.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/by_kyrgyzstan_morning_fragment.xml" value="0.1796875" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/by_modulary_fragment.xml" value="0.4" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/dynamic_fragment.xml" value="0.1796875" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_by_clients.xml" value="0.2645705521472393" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_first_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_home.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_report.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_reports.xml" value="0.264" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_request.xml" value="0.264" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_second_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_statistics.xml" value="0.264" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_by_clients.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_modulary_bottom.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_modulary_header.xml" value="0.4" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_month_recycler.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_morning_kg.xml" value="0.1796875" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_mounth_recycler.xml" value="0.4" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/toolbar_authorizatuon.xml" value="0.1796875" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/toolbar_item.xml" value="0.4" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/toolbar_item1.xml" value="0.44065934065934065" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/toolbar_item2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/toolbar_item3.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

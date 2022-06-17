@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FreshDesk</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="logIn">Авторизоваться</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="authorization">Авторизация</string>
+    <string name="themeTypeRequest">Тип заявки</string>
+    <string name="amount">Кол-во</string>
+    <string name="percent">% от всего</string>
+    <string name="bug">Ошибка/Bug</string>
+    <string name="changeRequest">Запрос на изменение</string>
+    <string name="questionSystem">Вопросы по системе</string>
+    <string name="newFunction">Запрос нового функционала</string>
+    <string name="parameterization">Вопрос по параметризации</string>
+    <string name="module">По модульно</string>
+    <string name="modulesStatus">Модули и статусы</string>
+    <string name="modulesClients">Модули и клиенты</string>
+    <string name="client">По клиентам</string>
+    <string name="kyrgyzstan09">На 09:00, Кыргызстан</string>
+    <string name="dynamic">На 09:00, в динамике</string>
+    <string name="todayAgents">Статусы заявок по агентам, на сегодня</string>
+    <string name="todayAgentsDynamic">Статусы заявок, на сегодня, в динамике</string>
+    <string name="stText">За период с 1 января текущего года по последний день месяца последнего отчёта</string>
+    <string name="created">Создано</string>
+    <string name="errors">Ошибки</string>
+    <string name="other">Другое</string>
+    <string name="total">Всего</string>
+    <string name="closed">Закрыто</string>
+    <string name="difference">Разница</string>
+    <string name="byModular">Распределение незакрытых (кроме решенных, отказов, закрытых) заявок по клиентам и модулям.</string>
+    <string name="statusrequestKG">Статусы заявок по агентам команды Кыргызстан, на 09:00 утра, сегодня</string>
+    <string name="dynamicText">Статусы на 09:00 утра сегодня, в динамике</string>
+
+</resources>
