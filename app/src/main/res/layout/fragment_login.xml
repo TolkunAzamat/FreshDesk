@@ -62,7 +62,8 @@
                 android:paddingStart="18dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginTop="4dp" />
+                android:layout_marginTop="4dp"
+              />
 
             <TextView
                 android:id="@+id/txtPassword"
@@ -77,22 +78,26 @@
                 app:layout_constraintBottom_toTopOf="@+id/edPassword"
                 android:layout_marginTop="16dp" />
 
-            <EditText
-                android:id="@+id/edPassword"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:drawableStart="@drawable/ic_key"
-                android:drawableEnd="@drawable/ic_hide"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:background="@drawable/edit"
-                android:layout_marginTop="4dp" />
+<com.google.android.material.textfield.TextInputLayout
 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:endIconMode="password_toggle"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:drawableStart="@drawable/ic_key"
+        android:paddingStart="18dp"
+        android:inputType="textPassword"
+        android:background="@drawable/edit"
+
+
+    />
+</com.google.android.material.textfield.TextInputLayout>
             <Button
                 android:id="@+id/btn"
                 android:layout_width="match_parent"

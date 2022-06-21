@@ -35,7 +35,7 @@ class LoginFragment : Fragment() {
     private fun login() {
         viewModel.login(binding.edLogin.text.toString(), binding.edPassword.text.toString()) {
             findNavController().navigate(R.id.action_loginFragment_to_secondSplashFragment)
-            Toast.makeText(requireContext(), SharedPreferences(requireContext()).token, Toast.LENGTH_SHORT).show()
+
         }
     }
 }

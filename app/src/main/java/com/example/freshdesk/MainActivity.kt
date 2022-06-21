@@ -2,23 +2,31 @@ package com.example.freshdesk
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.DiffUtil
 import com.example.freshdesk.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var databinding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        databinding=ActivityMainBinding.inflate(layoutInflater)
-        setContentView(databinding.root)
-        //setBottomNav()
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        setBottomNav()
 
     }
     private fun setBottomNav(){
         val navController = findNavController(R.id.home_container)
-        databinding.reportBtn.setOnClickListener {
-            navController.navigate(R.id.action_reportsFragment_to_statisticsFragment)
+        binding.reportBtn.setOnClickListener {
+            navController.navigate(R.id.reportsFragment)
         }
-        databinding.requestBtn.setOnClickListener {  }
+        binding.requestBtn.setOnClickListener {
+            navController.navigate(R.id.requestFragment)
+        }
+        binding.statisticsBtn.setOnClickListener {
+            navController.navigate(R.id.statisticsFragment)
+        }
     }
 }

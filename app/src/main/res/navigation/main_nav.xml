@@ -9,23 +9,31 @@
         android:id="@+id/reportsFragment"
         android:name="com.example.freshdesk.fragments.report.ReportsFragment"
         android:label="fragment_reports"
-        tools:layout="@layout/fragment_reports" >
-        <action
-            android:id="@+id/action_reportsFragment_to_statisticsFragment"
-            app:destination="@id/statisticsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_reports" />
     <fragment
         android:id="@+id/statisticsFragment"
         android:name="com.example.freshdesk.fragments.statistics.StatisticsFragment"
         android:label="fragment_statistics"
-        tools:layout="@layout/fragment_statistics" >
-        <action
-            android:id="@+id/action_statisticsFragment_to_requestFragment"
-            app:destination="@id/requestFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_statistics" />
     <fragment
         android:id="@+id/requestFragment"
         android:name="com.example.freshdesk.fragments.request.RequestFragment"
         android:label="fragment_request"
         tools:layout="@layout/fragment_request" />
+    <fragment
+        android:id="@+id/byModularyFragment"
+        android:name="com.example.freshdesk.fragments.request.ByModularyFragment"
+        android:label="ByModularyFragment" />
+    <fragment
+        android:id="@+id/byClientsFragment"
+        android:name="com.example.freshdesk.fragments.request.ByClientsFragment"
+        android:label="ByClientsFragment" />
+    <fragment
+        android:id="@+id/byKyrgyzstanMorningFragment"
+        android:name="com.example.freshdesk.fragments.request.ByKyrgyzstanMorningFragment"
+        android:label="ByKyrgyzstanMorningFragment" />
+    <fragment
+        android:id="@+id/dynamicFragment"
+        android:name="com.example.freshdesk.fragments.request.DynamicFragment"
+        android:label="DynamicFragment" />
 </navigation>

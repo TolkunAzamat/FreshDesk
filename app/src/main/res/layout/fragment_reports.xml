@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="viewmodel"
+            type="com.example.freshdesk.fragments.report.ReportsViewModel" />
     </data>
 
     <LinearLayout
@@ -27,15 +29,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="16dp"
-                android:paddingBottom="300dp">
+                android:paddingBottom="150dp">
 
-                    <com.github.mikephil.charting.charts.PieChart
-                        android:id="@+id/pieChart"
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp" />
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -97,7 +99,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp">
+                                android:layout_marginTop="8dp"
+                                android:id="@+id/bugs">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -111,7 +114,7 @@
                                     android:gravity="center_vertical" />
 
                                 <TextView
-                                    android:id="@+id/amountBug"
+                                    android:id="@+id/countBug"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     tools:text="240"
@@ -136,7 +139,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp">
+                                android:layout_marginTop="8dp"
+                                android:id="@+id/change">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -176,7 +180,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp">
+                                android:layout_marginTop="8dp"
+                                android:id="@+id/request">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -216,7 +221,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp">
+                                android:layout_marginTop="8dp"
+                                android:id="@+id/newFun">
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -256,7 +262,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp">
+                                android:layout_marginTop="8dp"
+                                android:id="@+id/parametrization">
 
                                 <TextView
                                     android:layout_width="0dp"

@@ -15,14 +15,14 @@ interface Api {
     @GET("/api/Reports/GetJsonReportBreakDownByTicketsTypeReport")// Разбивка отчетов по типам заявок
     suspend fun reports():Response<ReportBreakDownByTicketsTypeReport>
     @GET("/api/Reports/GetJsonReportMonthly")//очет по месяцам
-    suspend fun monthlyReports():Response<List<ReportMonthly>>
+    suspend fun monthlyReports():Response<List<ReportMonthlyItem>>
     @GET("/api/Reports/GetJsonReportModularly")//отчет по модулям
-    suspend fun modularlyReports():Response<List<ReportModularly>>
+    suspend fun modularlyReports():Response<List<ReportModularlyItem>>
     @GET("/api/Reports/GetJsonReportClientAndModule") //отчет по клиентам
-    suspend fun clientAndModule():Response<List<ReportClientAndModule>>
+    suspend fun clientAndModule():Response<List<ReportClientAndModuleItem>>
     @GET("/api/Reports/GetJsonReportInDynamic") //в динамике
-    suspend fun dynamicReport():Response<List<ReportInDynamic>>
+    suspend fun dynamicReport():Response<List<ReportInDynamicItem>>
     @GET("/api/Reports/GetJsonReportByAgents") //заявки по агентам
-    suspend fun agentsReports():Response<List<ReportByAgents>>
+    suspend fun agentsReports():Response<List<ReportByAgentsItem>>
 
 }

@@ -1,5 +1,6 @@
 package com.example.freshdesk.login
 
+import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.freshdesk.App
@@ -10,16 +11,15 @@ import kotlinx.coroutines.launch
 
 class LoginViewModel: ViewModel() {
     private val repository = MainRepository()
-
     fun login(username: String, password: String, isSuccess: () -> Unit) {
         viewModelScope.launch {
             repository.login(username, password).let {
                 if (it.isSuccessful) {
                     isSuccess.invoke()
                    SharedPreferences(getContext()).token = it.body()?.access_token
-
-                    //access token нужно сохранить
                 }
+                else
+                    Toast.makeText(getContext(), "Неверный логин или пароль", Toast.LENGTH_SHORT).show()
             }
         }
     }

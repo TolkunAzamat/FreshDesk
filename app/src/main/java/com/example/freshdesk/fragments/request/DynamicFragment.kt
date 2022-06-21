@@ -1,4 +1,4 @@
-package com.example.freshdesk.fragments.statistics
+package com.example.freshdesk.fragments.request
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle

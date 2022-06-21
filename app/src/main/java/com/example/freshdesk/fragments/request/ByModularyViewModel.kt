@@ -1,25 +1,23 @@
-package com.example.freshdesk.fragments.statistics
+package com.example.freshdesk.fragments.request
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.freshdesk.api.models.ReportBreakDownByTicketsTypeReport
-import com.example.freshdesk.api.models.ReportMonthly
-import com.example.freshdesk.api.models.ReportMonthlyItem
+import com.example.freshdesk.api.models.ReportModularlyItem
 import com.example.freshdesk.repository.MainRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class StatisticsViewModel: ViewModel() {
-
+class ByModularyViewModel : ViewModel() {
     private val repository = MainRepository()
-    var list=MutableLiveData<List<ReportMonthlyItem>>()
+    var list: MutableLiveData<List<ReportModularlyItem>> = MutableLiveData()
     init {
-        monthlystatistic()
+        modularlyReports()
     }
-    fun monthlystatistic() {
+
+    fun modularlyReports(){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.monthlyStatistics().let {
+            repository.modularlyReports().let {
                 if(it.isSuccessful)
                     list.postValue(it.body())
             }
