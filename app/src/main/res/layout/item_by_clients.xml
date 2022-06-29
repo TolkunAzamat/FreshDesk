@@ -29,9 +29,9 @@
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
                     style="@style/byModuls"
+                    android:textStyle="bold"
                     android:gravity="center"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -55,8 +55,7 @@
                     android:layout_height="match_parent"
                     style="@style/byModuls"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:gravity="center"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -82,8 +81,7 @@
                     android:layout_height="match_parent"
                     style="@style/byModuls"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textStyle="bold" />
+                    android:gravity="center"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -104,7 +102,6 @@
                     android:id="@+id/aur"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -129,7 +126,6 @@
                     android:id="@+id/accounting"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -153,7 +149,6 @@
                     android:id="@+id/deposits"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -179,7 +174,6 @@
                     android:id="@+id/ib"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -203,7 +197,6 @@
                     android:id="@+id/cards"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -229,7 +222,6 @@
                     android:id="@+id/cash"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -253,7 +245,6 @@
                     android:id="@+id/clients"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
                     style="@style/byModuls"
                     android:gravity="center"/>
@@ -279,7 +270,6 @@
                     android:id="@+id/compliance"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
                     style="@style/byModuls"
                     android:gravity="center"/>
@@ -304,7 +294,6 @@
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:gravity="center"/>
             </LinearLayout>
@@ -328,7 +317,6 @@
                     android:id="@+id/service"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -351,7 +339,6 @@
                     android:id="@+id/reports"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:gravity="center"
                     android:layout_gravity="center"/>
@@ -376,7 +363,6 @@
                     android:id="@+id/pledge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -399,7 +385,6 @@
                     android:id="@+id/prbo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -423,7 +408,6 @@
                     android:id="@+id/baseReference"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -446,7 +430,6 @@
                     android:id="@+id/eWallet"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:layout_gravity="center"
                     android:gravity="center"/>
@@ -470,7 +453,6 @@
                     android:id="@+id/esp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     android:layout_gravity="center"
                     style="@style/byModuls"
                     android:gravity="center"/>
@@ -493,7 +475,6 @@
                     android:id="@+id/treasuryOperations"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     style="@style/byModuls"
                     android:gravity="center"
                     android:layout_gravity="center"
@@ -521,7 +502,6 @@
                     style="@style/byModuls"
                     android:gravity="center"
                     android:layout_gravity="center"
-                    android:textStyle="bold"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

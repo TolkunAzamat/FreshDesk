@@ -11,10 +11,6 @@ import kotlinx.coroutines.launch
 class ReportsViewModel:ViewModel() {
     private val repository = MainRepository()
    var list:MutableLiveData<ReportBreakDownByTicketsTypeReport> = MutableLiveData()
-    init {
-        reports()
-    }
-
     fun reports(){
         viewModelScope.launch(Dispatchers.IO) {
             repository.breakDnReport().let {
@@ -23,5 +19,4 @@ class ReportsViewModel:ViewModel() {
             }
         }
     }
-
     }

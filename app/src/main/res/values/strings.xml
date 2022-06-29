@@ -23,7 +23,7 @@
     <string name="dynamic">На 09:00, в динамике</string>
     <string name="todayAgents">Статусы заявок по агентам, на сегодня</string>
     <string name="todayAgentsDynamic">Статусы заявок, на сегодня, в динамике</string>
-    <string name="stText">За период с 1 января текущего года по последний день месяца последнего отчёта</string>
+    <string name="stText">За период с 1 января текущего года  \nпо последний день месяца последнего отчёта</string>
     <string name="created">Создано</string>
     <string name="errors">Ошибки</string>
     <string name="other">Другое</string>

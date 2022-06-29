@@ -1,14 +1,18 @@
 package com.example.freshdesk.fragments.request
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.freshdesk.R
 import com.example.freshdesk.databinding.FragmentRequestBinding
+import com.example.freshdesk.login.LoginActivity
+import com.example.freshdesk.sharedPreferences.SharedPreferences
+import com.example.freshdesk.utils.alertDialog
 
 class RequestFragment : Fragment() {
     private lateinit var databinding:FragmentRequestBinding
@@ -34,6 +38,9 @@ class RequestFragment : Fragment() {
         }
         databinding.byDynamic.setOnClickListener {
             findNavController().navigate(R.id.dynamicFragment)
+        }
+        databinding.toolbar.exit.setOnClickListener {
+            alertDialog(requireContext())
         }
     }
 }

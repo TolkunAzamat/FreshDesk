@@ -17,16 +17,19 @@
             layout="@layout/toolbar_item"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/img_auth"/>
 
         <ImageView
             android:id="@+id/img_auth"
-            android:layout_width="256dp"
+            android:layout_width="match_parent"
             android:layout_height="256dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbar"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="56dp"
+            android:layout_marginStart="86dp"
+            android:layout_marginEnd="86dp"
             android:src="@drawable/shutterstock_1992" />
 
         <LinearLayout
@@ -48,7 +51,8 @@
                 android:text="@string/login"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                style="@style/header"/>
 
             <EditText
                 android:id="@+id/edLogin"
@@ -73,6 +77,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/password"
+                style="@style/header"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 app:layout_constraintBottom_toTopOf="@+id/edPassword"
@@ -108,6 +113,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:text="@string/logIn"
+                style="@style/button_txt"
                 android:backgroundTint="@color/blue"
                 android:layout_marginTop="16dp" />
         </LinearLayout>

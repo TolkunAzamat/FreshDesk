@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModel
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.example.freshdesk.R
 import com.example.freshdesk.adapters.ClientsAdapter
-import com.example.freshdesk.adapters.ReportModularAdapter
 import com.example.freshdesk.databinding.FragmentByClientsBinding
+import com.example.freshdesk.utils.alertDialog
+import com.example.freshdesk.utils.isNetworkConnected
 
 class ByClientsFragment : Fragment() {
     lateinit var databinding:FragmentByClientsBinding
@@ -25,12 +27,27 @@ class ByClientsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         databinding.toolbar.title.text="По клиентам"
-        setadapter()
+        databinding.toolbar.imgBack.setOnClickListener {
+        findNavController().navigate(R.id.requestFragment)
+        }
+        databinding.toolbar.exit.setOnClickListener {
+            alertDialog(requireContext())
+        }
+        checkInternet()
     }
-    fun setadapter(){
+    private fun setAdapter(){
         viewModel.list.observe(viewLifecycleOwner){
             databinding.recyclerClients.adapter = ClientsAdapter(it)
 
         }
     }
+    private fun checkInternet() {
+        if (isNetworkConnected(requireContext())) {
+            viewModel.clientAndModule()
+            setAdapter()
+        } else Toast.makeText(requireContext(),
+            "Отсутсвует подключение к интернету",
+            Toast.LENGTH_SHORT).show()
+    }
+
 }

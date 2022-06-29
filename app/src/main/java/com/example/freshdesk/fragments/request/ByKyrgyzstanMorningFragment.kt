@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.freshdesk.adapters.ClientsAdapter
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import com.example.freshdesk.R
 import com.example.freshdesk.adapters.MorningKgAdapter
 import com.example.freshdesk.databinding.ByKyrgyzstanMorningFragmentBinding
-import com.example.freshdesk.databinding.FragmentByClientsBinding
+import com.example.freshdesk.utils.alertDialog
+import com.example.freshdesk.utils.isNetworkConnected
 
 class ByKyrgyzstanMorningFragment : Fragment() {
 lateinit var databinding:ByKyrgyzstanMorningFragmentBinding
@@ -25,12 +28,26 @@ lateinit var databinding:ByKyrgyzstanMorningFragmentBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         databinding.toolbar.title.text="На 09:00, Кыргызстан"
-        setadapter()
+        databinding.toolbar.imgBack.setOnClickListener {
+            findNavController().navigate(R.id.requestFragment)
+        }
+        databinding.toolbar.exit.setOnClickListener {
+            alertDialog(requireContext())
+        }
+       checkInternet()
     }
-    fun setadapter(){
+   private fun setAdapter(){
         viewModel.list.observe(viewLifecycleOwner){
             databinding.recyclerAgents.adapter = MorningKgAdapter(it)
 
         }
+    }
+    private fun checkInternet() {
+        if (isNetworkConnected(requireContext())) {
+            viewModel.agentsReport()
+            setAdapter()
+        } else Toast.makeText(requireContext(),
+            "Отсутсвует подключение к интернету",
+            Toast.LENGTH_SHORT).show()
     }
 }

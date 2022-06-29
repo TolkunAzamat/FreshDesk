@@ -14,17 +14,20 @@
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1715" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_login.xml" value="0.1715" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_logo.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_person.xml" value="0.1655" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_person_click.xml" value="0.1655" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_reports.xml" value="0.161" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_reportscl.xml" value="0.161" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_request.xml" value="0.161" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_resource_statistics.xml" value="0.1715" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_second_splash.xml" value="0.1715" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/ic_statisticscl.xml" value="0.161" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/person_btn.xml" value="0.2155" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/reports_btn.xml" value="0.221" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/request_btn.xml" value="0.161" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/drawable/statistic_btn.xml" value="0.161" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/activity_login.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/by_kyrgyzstan_morning_fragment.xml" value="0.23859126984126985" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/by_modulary_fragment.xml" value="0.264" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/dynamic_fragment.xml" value="0.1796875" />
@@ -32,17 +35,20 @@
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_first_splash.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_home.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_report.xml" value="0.23854166666666668" />
-        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_reports.xml" value="0.264" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_reports.xml" value="0.37057220708446864" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_request.xml" value="0.264" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_second_splash.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/fragment_statistics.xml" value="0.264" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_by_clients.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_dynamic_recycler.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_modulary_bottom.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_modulary_header.xml" value="0.4" />
-        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_month_recycler.xml" value="0.17447916666666666" />
-        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_morning_kg.xml" value="0.1796875" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_month_recycler.xml" value="0.536" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_morning_kg.xml" value="0.264" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/item_mounth_recycler.xml" value="0.4" />
+        <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/markerview.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/toolbar_authorizatuon.xml" value="0.1796875" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/toolbar_item.xml" value="0.4" />
         <entry key="..\:/Users/Tolkun/Documents/GitHub/FreshDesk/app/src/main/res/layout/toolbar_item1.xml" value="0.44065934065934065" />

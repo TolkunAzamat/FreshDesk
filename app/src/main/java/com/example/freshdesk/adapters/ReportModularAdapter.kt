@@ -1,21 +1,15 @@
 package com.example.freshdesk.adapters
 
-import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.freshdesk.App.Companion.getContext
-import com.example.freshdesk.api.models.ReportModularlyItem
-import com.example.freshdesk.api.models.ReportMonthlyItem
+import com.example.freshdesk.api.models.ReportModularly
 import com.example.freshdesk.databinding.ItemModularyBottomBinding
-import com.example.freshdesk.databinding.ItemMonthRecyclerBinding
 import java.math.RoundingMode
 import java.text.DecimalFormat
-import kotlin.math.round
 
-class ReportModularAdapter(private val list: List<ReportModularlyItem>): RecyclerView.Adapter<ReportModularAdapter.ViewHolder>() {
+class ReportModularAdapter(private val list: List<ReportModularly>): RecyclerView.Adapter<ReportModularAdapter.ViewHolder>() {
     class ViewHolder(val databinding: ItemModularyBottomBinding): RecyclerView.ViewHolder(databinding.root){
     }
 

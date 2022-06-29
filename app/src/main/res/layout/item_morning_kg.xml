@@ -12,297 +12,69 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
+            android:id="@+id/agentCard"
+           style="@style/modulerec1"
             app:cardCornerRadius="4dp"
             app:cardBackgroundColor="#DBDBDB"
             app:cardElevation="0dp"
-            android:layout_marginLeft="4dp">
+            android:layout_marginLeft="4dp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
 
                 <TextView
                     android:id="@+id/agent"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    style="@style/byModuls"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:id="@+id/openlyCard"
+            style="@style/openlyRec"
             app:cardCornerRadius="4dp"
             app:cardElevation="0dp"
             android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
+            android:layout_marginLeft="4dp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center">
 
                 <TextView
                     android:id="@+id/openlyGet"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
                 <TextView
                     android:id="@+id/openlySet"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
                 <TextView
                     android:id="@+id/openlyStatic"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            app:cardCornerRadius="4dp"
-            app:cardBackgroundColor="#DBDBDB"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/pendingGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/pendingSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/pendingStatic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/awaitingEvaluationGet"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/awaitingEvaluationSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-            app:cardBackgroundColor="#DBDBDB"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/evaluationInProgressGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/evaluationInProgressSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/ratingSentGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/ratingSentSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-           app:cardBackgroundColor="#DBDBDB"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/refusalGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/refusalSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/confirmedGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/confirmedSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-            app:cardBackgroundColor="#DBDBDB"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/inProgressGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/inProgressSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/onTestingGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/onTestingSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-            app:cardBackgroundColor="#DBDBDB"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/feedbackGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/feedbackSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginLeft="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/queueGet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/queueSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
+            android:id="@+id/pendingCard"
+            style="@style/openlyRec"
             app:cardCornerRadius="4dp"
             app:cardBackgroundColor="#DBDBDB"
             app:cardElevation="0dp"
@@ -313,16 +85,321 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/pendingGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+                <TextView
+                    android:id="@+id/pendingSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+                <TextView
+                    android:id="@+id/pendingStatic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/awaitingEvaluationCard"
+            style="@style/mod"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            >
+
+        <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+            android:gravity="center"
+>
+        <TextView
+             android:id="@+id/awaitingEvaluationGet"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+            style="@style/byModuls"/>
+        <TextView
+             android:id="@+id/awaitingEvaluationSet"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+            style="@style/byModuls"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/evaluationInProgressCard"
+            style="@style/mod"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="#DBDBDB"
+            app:cardElevation="0dp"
+            android:layout_weight="0.3"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            >
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+            <TextView
+            android:id="@+id/evaluationInProgressGet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+                style="@style/byModuls"/>
+            <TextView
+            android:id="@+id/evaluationInProgressSet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/byModuls"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ratingSentCard"
+            style="@style/mod"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="0.3"
+            android:layout_marginLeft="4dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/ratingSentGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+                <TextView
+                    android:id="@+id/ratingSentSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/refusalCard"
+           style="@style/mod"
+            app:cardCornerRadius="4dp"
+           app:cardBackgroundColor="#DBDBDB"
+            app:cardElevation="0dp"
+            android:layout_weight="0.3"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/refusal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    style="@style/byModuls"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/confirmedCard"
+           style="@style/mod"
+            app:cardCornerRadius="4dp"
+            android:layout_weight="0.3"
+            app:cardElevation="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/confirmedGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+                <TextView
+                    android:id="@+id/confirmedSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/inProgressCard"
+            style="@style/mod"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            app:cardBackgroundColor="#DBDBDB"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/inProgressGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+                <TextView
+                    android:id="@+id/inProgressSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/byModuls"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/onTestingCard"
+            style="@style/mod"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/onTestingGet"
+                    style="@style/byModuls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/onTestingSet"
+                    style="@style/byModuls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/feedbackCard"
+            style="@style/mod"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            app:cardBackgroundColor="#DBDBDB"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/feedbackGet"
+                    style="@style/byModuls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/feedbackSet"
+                    style="@style/byModuls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/queueCard"
+            style="@style/mod"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/queueGet"
+                    style="@style/byModuls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/queueSet"
+                    style="@style/byModuls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/closedCard"
+            style="@style/closed"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            app:cardBackgroundColor="#DBDBDB"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/closedGet"
+                    style="@style/byModuls"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/closedSet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

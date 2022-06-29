@@ -36,4 +36,8 @@
         android:id="@+id/dynamicFragment"
         android:name="com.example.freshdesk.fragments.request.DynamicFragment"
         android:label="DynamicFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.freshdesk.fragments.profile.ProfileFragment"
+        android:label="ProfileFragment" />
 </navigation>

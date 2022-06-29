@@ -4,14 +4,10 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.freshdesk.api.models.ReportClientAndModuleItem
-import com.example.freshdesk.api.models.ReportModularlyItem
+import com.example.freshdesk.api.models.ReportClientAndModule
 import com.example.freshdesk.databinding.ItemByClientsBinding
-import com.example.freshdesk.databinding.ItemModularyBottomBinding
-import java.math.RoundingMode
-import java.text.DecimalFormat
 
-class ClientsAdapter(private val list: List<ReportClientAndModuleItem>): RecyclerView.Adapter<ClientsAdapter.ViewHolder>() {
+class ClientsAdapter(private val list: List<ReportClientAndModule>): RecyclerView.Adapter<ClientsAdapter.ViewHolder>() {
     class ViewHolder(val databinding: ItemByClientsBinding): RecyclerView.ViewHolder(databinding.root){
     }
 
@@ -45,18 +41,18 @@ class ClientsAdapter(private val list: List<ReportClientAndModuleItem>): Recycle
             it.treasuryOperations.text=item.treasuryOperations.toString()
             it.integration.text=item.integrationService.toString()
             if (position % 2 == 0) {
-                holder.databinding.let {
-                    it.namecard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.rkoCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.accountingCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.ibCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.cashCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.complianceCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.serviceCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.pledgeCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.baseReferenceCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.espCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
-                    it.integrationCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                holder.databinding.let {card->
+                    card.namecard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.rkoCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.accountingCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.ibCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.cashCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.complianceCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.serviceCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.pledgeCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.baseReferenceCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.espCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
+                    card.integrationCard.setCardBackgroundColor(Color.parseColor("#DBDBDB"))
                 }
             }
         }

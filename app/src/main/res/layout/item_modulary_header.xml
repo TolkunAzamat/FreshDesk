@@ -10,14 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            android:gravity="center_vertical">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="65dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#E7E7E7"
+                android:layout_weight="0.8"
+                app:cardBackgroundColor="#E7E7E7"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="0dp">
 
@@ -31,17 +30,18 @@
                         android:layout_height="match_parent"
                         style="@style/byModuls"
                         android:textColor="@color/black"
-                        android:gravity="center"
                         android:textStyle="bold"
                         android:text="Модули"
-                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="8dp"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="65dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.6"
                 android:backgroundTint="#E7E7E7"
                 app:cardCornerRadius="4dp"
                 android:layout_marginStart="4dp"
@@ -57,18 +57,18 @@
                         android:layout_height="match_parent"
                         style="@style/byModuls"
                         android:textColor="#EC5555"
-                        android:gravity="center"
                         android:text="Открыто"
                         android:textStyle="bold"
-                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="65dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#E7E7E7"
+                android:layout_weight="0.6"
+                app:cardBackgroundColor="#E7E7E7"
                 app:cardCornerRadius="4dp"
                 android:layout_marginStart="4dp"
                 app:cardElevation="0dp">
@@ -91,9 +91,10 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="65dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#E7E7E7"
+                android:layout_weight="0.6"
+                app:cardBackgroundColor="#E7E7E7"
                 app:cardCornerRadius="4dp"
                 android:layout_marginStart="4dp"
                 app:cardElevation="0dp">
@@ -116,9 +117,10 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="65dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#E7E7E7"
+                android:layout_weight="0.6"
+               app:cardBackgroundColor="#E7E7E7"
                 app:cardCornerRadius="4dp"
                 android:layout_marginStart="4dp"
                 app:cardElevation="0dp">
@@ -141,9 +143,10 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="65dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#E7E7E7"
+                android:layout_weight="0.6"
+                app:cardBackgroundColor="#E7E7E7"
                 app:cardCornerRadius="4dp"
                 android:layout_marginStart="4dp"
                 app:cardElevation="0dp">

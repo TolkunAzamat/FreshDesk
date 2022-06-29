@@ -20,15 +20,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/byModular"
                 style="@style/byModulary"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"/>
             <ScrollView
@@ -37,21 +39,18 @@
                 <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.3"
+                    android:layout_weight="0.25"
                     android:orientation="vertical"
-                    android:layout_marginBottom="105dp">
+                    >
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_weight="0.5"
-                        android:backgroundTint="#E7E7E7"
+                        app:cardBackgroundColor="#E7E7E7"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp">
 
@@ -60,16 +59,17 @@
                             android:layout_height="match_parent">
 
                             <TextView
+                                android:gravity="center_vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Клиенты"
-                                android:gravity="center"
-                                style="@style/insBold"
+                                android:layout_marginStart="8dp"
+                                style="@style/byModuls"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_weight="0.5"
                         app:cardCornerRadius="4dp"
@@ -84,16 +84,19 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Кредиты"
-                                style="@style/insBold"
+                                style="@style/byModuls"
                                 android:textStyle="bold"
-                                android:gravity="center"/>
+                                android:layout_marginStart="8dp"
+                                android:gravity="center_vertical"
+                                />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
-                        app:cardCornerRadius="4dp"                        android:backgroundTint="#E7E7E7"
+                        app:cardCornerRadius="4dp"
+                        android:backgroundTint="#E7E7E7"
                         app:cardElevation="0dp"
                         android:layout_marginTop="4dp">
 
@@ -105,14 +108,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:textStyle="bold"
+                                android:gravity="center_vertical"
                                 android:text="РКО"
-                                android:gravity="center"
-                                style="@style/insBold"/>
+                                android:layout_marginStart="8dp"
+                                style="@style/byModuls"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -124,15 +128,16 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:gravity="center_vertical"
                                 android:text="Аур"
-                                style="@style/insBold"
+                                style="@style/byModuls"
                                 android:textStyle="bold"
-                                android:gravity="center"/>
+                                android:layout_marginStart="8dp"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         android:backgroundTint="#E7E7E7"
@@ -147,14 +152,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Бухгалтерия"
+                                android:gravity="center_vertical"
                                 android:textStyle="bold"
-                                style="@style/insBold"
-                                android:gravity="center"/>
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
+                                />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -168,15 +175,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Депозиты/\nраcчетные"
+                                android:gravity="center_vertical"
                                 android:textStyle="bold"
-                                style="@style/insBold"
-                                android:gravity="center"
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
                                 />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_weight="0.5"
                         app:cardCornerRadius="4dp"
@@ -192,15 +200,16 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:gravity="center_vertical"
                                 android:text="ИБ"
-                                style="@style/insBold"
+                                style="@style/byModuls"
                                 android:textStyle="bold"
-                                android:gravity="center"/>
-                        </LinearLayout>
+                                android:layout_marginStart="8dp"/>
+                            </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:layout_weight="0.5"
                         app:cardCornerRadius="4dp"
@@ -214,15 +223,16 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:gravity="center_vertical"
                                 android:text="Карты"
                                 android:textStyle="bold"
-                                style="@style/insBold"
-                                android:gravity="center"/>
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -238,14 +248,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Касса"
-                                style="@style/insBold"
-                                android:gravity="center"
+                                android:gravity="center_vertical"
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -258,15 +269,16 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:gravity="center_vertical"
                                 android:text="Клиенты"
-                                style="@style/insBold"
-                                android:gravity="center"
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -282,14 +294,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Комплеанс"
-                                style="@style/insBold"
-                                android:gravity="center"
+                                android:gravity="center_vertical"
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -300,17 +313,18 @@
                             android:layout_height="match_parent">
 
                             <TextView
+                                android:gravity="center_vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Справочники"
-                                style="@style/insBold"
-                                android:gravity="center"
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -325,15 +339,16 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:gravity="center_vertical"
                                 android:text="Сервис"
-                                style="@style/insBold"
-                                android:gravity="center"
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -346,15 +361,16 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:gravity="center_vertical"
                                 android:text="Отчеты"
-                                style="@style/insBold"
-                                android:gravity="center"
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -368,16 +384,17 @@
 
                             <TextView
                                 android:layout_width="match_parent"
+                                android:gravity="center_vertical"
                                 android:layout_height="match_parent"
                                 android:text="Залоги"
-                                style="@style/insBold"
-                                android:gravity="center"
+                                style="@style/byModuls"
+                                android:layout_marginStart="8dp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -391,13 +408,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="ПРБО"
-                                android:gravity="center"
-                                style="@style/insBold"
+                                android:layout_marginStart="8dp"
+                                android:gravity="center_vertical"
+                                style="@style/byModuls"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -413,13 +431,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Базовые справочники"
-                                android:gravity="center"
-                                style="@style/insBold"
+                                android:gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                style="@style/byModuls"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -433,13 +452,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Э.кошелек"
-                                android:gravity="center"
-                                style="@style/insBold"
+                                android:gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                style="@style/byModuls"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -454,14 +474,15 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:gravity="center_vertical"
                                 android:text="ЭЦП"
-                                android:gravity="center"
-                                style="@style/insBold"
+                                android:layout_marginStart="8dp"
+                                style="@style/byModuls"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -476,13 +497,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Казначейские операции"
-                                android:gravity="center"
-                                style="@style/insBold"
+                                android:gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                style="@style/byModuls"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="35dp"
                         app:cardCornerRadius="4dp"
                         app:cardElevation="0dp"
@@ -498,23 +520,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Integration Service"
-                                android:gravity="center"
-                                style="@style/insBold"
+                                android:layout_marginStart="8dp"
+                                android:gravity="center_vertical"
+                                style="@style/byModuls"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:layout_marginStart="4dp"
                     android:id="@+id/recyclerClients"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.7"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/item_by_clients"
-                    android:paddingBottom="105dp"/>
+                    tools:listitem="@layout/item_by_clients"/>
             </LinearLayout>
             </ScrollView>
             </LinearLayout>

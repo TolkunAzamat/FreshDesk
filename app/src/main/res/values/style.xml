@@ -12,6 +12,69 @@
         <item name="android:background">@drawable/statistic_btn</item>
         <item name="android:button">@null</item>
     </style>
+    <style name="profile">
+        <item name="android:background">@drawable/person_btn</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="agent">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">1.5</item>
+    </style>
+    <style name="awaitingEvaluation">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_weight">1.5</item>
+    </style>
+    <style name="open">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_weight">1.5</item>
+    </style>
+    <style name="module2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">0.8</item>
+    </style>
+    <style name="done">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1.5</item>
+    </style>
+    <style name="done2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">0.8</item>
+    </style>
+    <style name="module3">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_weight">0.8</item>
+    </style>
+    <style name="module333">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_weight">0.8</item>
+    </style>
+    <style name="modulerec1">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">1.5</item>
+    </style>
+    <style name="mod">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+    <style name="closed">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+    <style name="openlyRec">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
     <style name="Toolbar_1">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">16sp</item>
@@ -21,15 +84,15 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#232630</item>
         <item name="fontFamily">@font/inter</item>
-            </style>
-<style name="title2">
-    <item name="android:textColor">#232630</item>
-    <item name="android:textSize">16sp</item>
-    <item name="fontFamily">@font/inter</item>
-</style>
-    <style name="requestth">
-        <item name="android:textColor">#212121</item>
-        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="title2">
+        <item name="android:textColor">#232630</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/inter</item>
+    </style>
+    <style name="button_txt">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
         <item name="fontFamily">@font/inter</item>
     </style>
     <style name="header">
@@ -63,23 +126,14 @@
         <item name="android:textSize">12sp</item>
         <item name="fontFamily">@font/inter</item>
     </style>
-    <style name="insBold">
-        <item name="android:textColor">#212121</item>
-        <item name="android:textSize">12sp</item>
-        <item name="fontFamily">@font/inter</item>
-    </style>
     <style name="byModulary">
         <item name="android:textColor">#232630</item>
         <item name="android:textSize">14sp</item>
         <item name="fontFamily">@font/inter</item>
     </style>
     <style name="byModuls">
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">9sp</item>
         <item name="fontFamily">@font/inter</item>
         <item name="android:textColor">#212121</item>
-    </style>
-    <style name="byModuls1">
-        <item name="android:textSize">12sp</item>
-        <item name="fontFamily">@font/inter</item>
     </style>
 </resources>

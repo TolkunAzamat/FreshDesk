@@ -42,12 +42,17 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#D9D9D9" />
+                    android:background="#D9D9D9"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
@@ -62,7 +67,7 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -70,8 +75,9 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/themeTypeRequest"
                                     android:layout_weight="0.8"
-                                    android:layout_marginLeft="24dp"
+                                    android:layout_marginLeft="8dp"
                                     style="@style/header"
+                                    android:textStyle="bold"
 
                                     />
 
@@ -80,34 +86,40 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/amount"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
+                                    android:layout_marginLeft="8dp"
                                     style="@style/header"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:textStyle="bold"/>
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:text="@string/percent"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
+                                    android:layout_marginLeft="8dp"
                                     android:layout_marginEnd="9dp"
                                     style="@style/header"
-                                    android:gravity="center" />
+                                    android:gravity="center"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
-
+                   <androidx.cardview.widget.CardView
+                     android:id="@+id/bugs"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     app:cardElevation="0dp"
+                     android:layout_marginTop="8dp"
+                       app:cardCornerRadius="8dp"
+                       >
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp"
-                                android:id="@+id/bugs">
-
+                                android:layout_marginLeft="8dp">
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:text="@string/bug"
                                     android:layout_weight="0.8"
-                                    android:layout_marginLeft="24dp"
                                     style="@style/header"
                                     android:drawableStart="@drawable/ic_ellipse_10"
                                     android:drawablePadding="4dp"
@@ -119,7 +131,6 @@
                                     android:layout_height="wrap_content"
                                     tools:text="240"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
                                     style="@style/header"
                                     android:gravity="center" />
 
@@ -128,26 +139,31 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
-                                    android:layout_marginEnd="9dp"
                                     style="@style/header"
                                     tools:text="5%"
                                     android:gravity="center" />
                             </LinearLayout>
-
+</androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/change"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="0dp"
+                                android:layout_marginTop="8dp"
+                                app:cardCornerRadius="8dp"
+                                >
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp"
-                                android:id="@+id/change">
+                                android:layout_marginLeft="8dp"
+                                >
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:text="@string/changeRequest"
                                     android:layout_weight="0.8"
-                                    android:layout_marginLeft="24dp"
                                     style="@style/header"
                                     android:drawableStart="@drawable/ic_ellipse_10"
                                     android:drawableTint="#4560FF"
@@ -160,7 +176,6 @@
                                     android:layout_height="wrap_content"
                                     tools:text="240"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
                                     style="@style/header"
                                     android:gravity="center" />
 
@@ -169,67 +184,75 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
-                                    android:layout_marginEnd="9dp"
                                     style="@style/header"
                                     tools:text="5%"
                                     android:gravity="center" />
                             </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/request"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="0dp"
+                                android:layout_marginTop="8dp"
+                                app:cardCornerRadius="8dp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="8dp"
+                                    >
 
-                            <LinearLayout
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/questionSystem"
+                                        android:layout_weight="0.8"
+                                        style="@style/header"
+                                        android:drawableTint="#FFC869"
+                                        android:drawableStart="@drawable/ic_ellipse_10"
+                                        android:drawablePadding="4dp"
+                                        android:gravity="center_vertical" />
+
+                                    <TextView
+                                        android:id="@+id/questionAmount"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        tools:text="240"
+                                        android:layout_weight="0.3"
+                                         style="@style/header"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:id="@+id/percentQuestion"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        style="@style/header"
+                                        tools:text="5%"
+                                        android:gravity="center" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/newFun"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="0dp"
+                                android:layout_marginTop="8dp"
+                                app:cardCornerRadius="8dp">
+                                <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp"
-                                android:id="@+id/request">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/questionSystem"
-                                    android:layout_weight="0.8"
-                                    android:layout_marginLeft="24dp"
-                                    style="@style/header"
-                                    android:drawableTint="#FFC869"
-                                    android:drawableStart="@drawable/ic_ellipse_10"
-                                    android:drawablePadding="4dp"
-                                    android:gravity="center_vertical" />
-
-                                <TextView
-                                    android:id="@+id/questionAmount"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    tools:text="240"
-                                    android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
-                                    style="@style/header"
-                                    android:gravity="center" />
-
-                                <TextView
-                                    android:id="@+id/percentQuestion"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
-                                    android:layout_marginEnd="9dp"
-                                    style="@style/header"
-                                    tools:text="5%"
-                                    android:gravity="center" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginTop="8dp"
-                                android:id="@+id/newFun">
+                                    android:layout_marginLeft="8dp"
+                                >
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:text="@string/newFunction"
                                     android:layout_weight="0.8"
-                                    android:layout_marginLeft="24dp"
                                     style="@style/header"
                                     android:drawableTint="#F98F57"
                                     android:drawableStart="@drawable/ic_ellipse_10"
@@ -242,7 +265,6 @@
                                     android:layout_height="wrap_content"
                                     tools:text="240"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
                                     style="@style/header"
                                     android:gravity="center" />
 
@@ -251,26 +273,31 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
-                                    android:layout_marginEnd="9dp"
                                     style="@style/header"
                                     tools:text="5%"
                                     android:gravity="center" />
                             </LinearLayout>
-
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/parametrization"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardElevation="0dp"
+                                android:layout_marginTop="8dp"
+                                app:cardCornerRadius="8dp"
+                                android:layout_gravity="center">
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="8dp"
-                                android:id="@+id/parametrization">
+                                android:layout_marginLeft="8dp"
+                               >
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:text="@string/parameterization"
                                     android:layout_weight="0.8"
-                                    android:layout_marginLeft="24dp"
                                     style="@style/header"
                                     android:drawableTint="#73C6FF"
                                     android:drawableStart="@drawable/ic_ellipse_10"
@@ -283,7 +310,6 @@
                                     android:layout_height="wrap_content"
                                     tools:text="240"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
                                     style="@style/header"
                                     android:gravity="center" />
 
@@ -292,12 +318,11 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.3"
-                                    android:layout_marginLeft="23dp"
-                                    android:layout_marginEnd="9dp"
                                     style="@style/header"
                                     tools:text="5%"
                                     android:gravity="center" />
                             </LinearLayout>
+                            </androidx.cardview.widget.CardView>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>

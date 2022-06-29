@@ -30,25 +30,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:text="@string/stText"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:layout_marginTop="16dp" />
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/lineChart"
                     android:layout_width="match_parent"
-                    android:layout_height="205dp"
+                    android:layout_height="220dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp" />
 
                 <View
+                    android:id="@+id/view"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#D9D9D9"
@@ -60,93 +61,103 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp">
+                    android:layout_marginTop="24dp"
+                    android:paddingBottom="150dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:id="@+id/line"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_weight="0.2"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/recycler_month"
+                        >
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/created"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
                             android:text="@string/created"
-                            android:layout_marginStart="8dp"
                             style="@style/created"
-                            android:paddingStart="8dp"
-                            android:drawablePadding="4dp"
-                            android:gravity="center" />
+                            android:gravity="center_vertical"
+                            />
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/bug"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
                             android:text="@string/errors"
-                            android:layout_marginStart="8dp"
                             style="@style/ins"
                             android:drawableStart="@drawable/ic_ellipse_10"
-                            android:paddingStart="8dp"
                             android:drawablePadding="4dp"
-                            android:gravity="center_vertical" />
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+
+                            />
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
                             android:text="@string/other"
-                            android:layout_marginStart="8dp"
                             style="@style/ins"
                             android:drawableStart="@drawable/ic_ellipse_10"
                             android:drawableTint="#96CCE4"
-                            android:paddingStart="8dp"
                             android:drawablePadding="4dp"
-                            android:gravity="center_vertical" />
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="8dp"/>
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
                             android:text="@string/total"
-                            android:layout_marginStart="8dp"
                             style="@style/ins"
                             android:drawableStart="@drawable/ic_ellipse_10"
                             android:drawableTint="#FFC869"
-                            android:paddingStart="8dp"
                             android:drawablePadding="4dp"
-                            android:gravity="center_vertical" />
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="8dp"/>
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
                             android:text="@string/closed"
-                            android:layout_marginStart="8dp"
                             style="@style/ins"
                             android:drawableStart="@drawable/ic_ellipse_10"
                             android:drawableTint="#84CD78"
-                            android:paddingStart="8dp"
                             android:drawablePadding="4dp"
-                            android:gravity="center_vertical" />
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="8dp"/>
 
                         <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
                             android:text="@string/difference"
-                            android:layout_marginStart="8dp"
                             style="@style/ins"
                             android:drawableStart="@drawable/ic_ellipse_10"
                             android:drawableTint="#4560FF"
-                            android:paddingStart="8dp"
                             android:drawablePadding="4dp"
-                            android:gravity="center_vertical" />
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="8dp"/>
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_month"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
+                        android:layout_marginLeft="4dp"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:listitem="@layout/item_month_recycler" />
+                        tools:listitem="@layout/item_month_recycler"
+                        app:layout_constraintStart_toEndOf="@+id/line"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

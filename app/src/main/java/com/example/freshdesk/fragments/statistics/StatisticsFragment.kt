@@ -1,30 +1,39 @@
 package com.example.freshdesk.fragments.statistics
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import com.example.freshdesk.R
+import com.example.freshdesk.adapters.MarkerAdapter
 import com.example.freshdesk.adapters.MonthStatisticsAdapter
-import com.example.freshdesk.api.models.ReportMonthlyItem
-import com.example.freshdesk.databinding.FragmentByClientsBinding
-import com.example.freshdesk.databinding.FragmentReportsBinding
+import com.example.freshdesk.api.models.ReportMonthly
 import com.example.freshdesk.databinding.FragmentStatisticsBinding
-import com.example.freshdesk.fragments.report.ReportsViewModel
+import com.example.freshdesk.login.LoginActivity
+import com.example.freshdesk.sharedPreferences.SharedPreferences
+import com.example.freshdesk.utils.alertDialog
+import com.example.freshdesk.utils.isNetworkConnected
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
-import com.github.mikephil.charting.formatter.PercentFormatter
+import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import java.util.ArrayList
 
 class StatisticsFragment : Fragment(){
     private lateinit var databinding:FragmentStatisticsBinding
     private val viewModel by lazy { StatisticsViewModel() }
+    private val adapter by lazy { MonthStatisticsAdapter() }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -32,28 +41,44 @@ class StatisticsFragment : Fragment(){
         databinding= FragmentStatisticsBinding.inflate(inflater,container,false)
         return databinding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         databinding.toolbar.title.text="Статистика"
-        setadapter()
+
+        databinding.toolbar.exit.setOnClickListener {
+            alertDialog(requireContext())}
+        setClicks()
+        checkInternet()
+
     }
-    fun setadapter(){
+    private fun setAdapter(){
         viewModel.list.observe(viewLifecycleOwner){
-            databinding.recyclerMonth.adapter = MonthStatisticsAdapter(it)
+            adapter.setList(it)
+            databinding.recyclerMonth.adapter= adapter
             it?.let { it1 -> setLineChart(databinding.lineChart, it1) }
-
         }
+        adapter.setLine(databinding.lineChart)
     }
-    fun setLineChart(lineChart: LineChart, response: List<ReportMonthlyItem>) {
 
+    private fun setClicks() {
+        databinding.lineChart.setOnChartValueSelectedListener(object : OnChartValueSelectedListener {
+            override fun onValueSelected(e: Entry?, h: Highlight?) {
+                databinding.lineChart.marker = MarkerAdapter(requireContext(), R.layout.markerview, adapter.getMonth(e?.x?.toInt()!!))
+                adapter.setPos(e?.x?.toInt(),h?.dataSetIndex)
+                adapter.notifyDataSetChanged()
+            }
+
+            override fun onNothingSelected() {
+            }
+        })
+    }
+   private fun setLineChart(lineChart: LineChart, response: List<ReportMonthly>) {
         val statisticsMonthly = ArrayList<String>()
         val statisticsError = ArrayList<Entry>()
         val statisticsOther = ArrayList<Entry>()
         val statisticsTotal = ArrayList<Entry>()
         val statisticsClosed = ArrayList<Entry>()
         val statisticsDifference = ArrayList<Entry>()
-
         for (i in response.indices) {
             val month = response[i].nameOfMonth
             val error = response[i].countOfCreatedTicketsWithTypeError
@@ -61,7 +86,6 @@ class StatisticsFragment : Fragment(){
             val total = response[i].countOfCreatedTickets
             val closed = response[i].countOfClosedTicketsInThisMonth
             val difference = response[i].difference
-
             statisticsMonthly.add(month)
             statisticsError.add(Entry(i.toFloat(), error.toFloat()))
             statisticsOther.add(Entry(i.toFloat(), other.toFloat()))
@@ -69,7 +93,6 @@ class StatisticsFragment : Fragment(){
             statisticsClosed.add(Entry(i.toFloat(), closed.toFloat()))
             statisticsDifference.add(Entry(i.toFloat(), difference.toFloat()))
         }
-
         val error = LineDataSet(statisticsError, "Error")
         val other = LineDataSet(statisticsOther, "other")
         val total = LineDataSet(statisticsTotal, "total")
@@ -78,13 +101,13 @@ class StatisticsFragment : Fragment(){
 
         error.apply {
             lineWidth = 2f
-            color = Color.parseColor("#EC5555")
+            setColor(Color.parseColor("#EC5555"))
             setDrawCircles(true)
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#EC5555"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 5f
-            circleHoleRadius = 3f
+            circleRadius = 8f
+            circleHoleRadius = 6f
         }
 
         other.apply {
@@ -94,8 +117,8 @@ class StatisticsFragment : Fragment(){
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#96CCE4"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 5f
-            circleHoleRadius = 3f
+            circleRadius = 8f
+            circleHoleRadius = 6f
         }
 
         total.apply {
@@ -105,8 +128,8 @@ class StatisticsFragment : Fragment(){
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#FFC869"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 5f
-            circleHoleRadius = 3f
+            circleRadius = 8f
+            circleHoleRadius = 6f
         }
 
         closed.apply {
@@ -116,8 +139,8 @@ class StatisticsFragment : Fragment(){
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#84CD78"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 5f
-            circleHoleRadius = 3f
+            circleRadius = 8f
+            circleHoleRadius = 6f
         }
 
         difference.apply {
@@ -127,8 +150,8 @@ class StatisticsFragment : Fragment(){
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#4560FF"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 5f
-            circleHoleRadius = 3f
+            circleRadius = 8f
+            circleHoleRadius = 6f
         }
 
         val dataSets: ArrayList<ILineDataSet> = ArrayList()
@@ -147,18 +170,27 @@ class StatisticsFragment : Fragment(){
             granularity = 1f
             labelRotationAngle = 0f
             valueFormatter = IndexAxisValueFormatter(statisticsMonthly)
-            isEnabled = true
+            isEnabled = false
         }
 
         lineChart.apply {
             setTouchEnabled(true)
             description.isEnabled = false
             legend.isEnabled = false
-            animateY(1400, Easing.EaseInSine)
+            animateY(1400, Easing.EaseInOutElastic)
         }
 
         val data = LineData(dataSets)
         lineChart.data = data
         lineChart.notifyDataSetChanged()
         lineChart.invalidate()
-    }}
+    }
+    private fun checkInternet() {
+        if (isNetworkConnected(requireContext())) {
+            viewModel.monthlystatistic()
+            setAdapter()
+        } else Toast.makeText(requireContext(),
+            "Отсутсвует подключение к интернету",
+            Toast.LENGTH_SHORT).show()
+    }
+}

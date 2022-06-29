@@ -10,4 +10,11 @@ class SharedPreferences(context: Context) {
         get()=pref.getString("token",null)
         set(value)=pref.edit().putString("token",value).apply()
 
+    var username: String?
+        get()=pref.getString("username",null)
+        set(value)=pref.edit().putString("username",value).apply()
+
+    fun clean() {
+        pref.edit().clear().apply()
+    }
 }

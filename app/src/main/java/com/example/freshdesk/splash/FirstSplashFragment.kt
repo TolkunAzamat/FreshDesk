@@ -29,7 +29,7 @@ class FirstSplashFragment : Fragment() {
       var sharedPreferences=SharedPreferences(requireContext())
         if (sharedPreferences.token!=null)
         {
-            Handler(Looper.getMainLooper()).postDelayed({startActivity(Intent(requireActivity(), MainActivity::class.java))}, 1000)
+            Handler(Looper.getMainLooper()).postDelayed({startActivity(Intent(requireActivity(), MainActivity::class.java))}, 2000)
 
         } else {
             Handler(Looper.getMainLooper()).postDelayed({findNavController().navigate(R.id.action_firstSplashFragment_to_loginFragment)}, 1000)

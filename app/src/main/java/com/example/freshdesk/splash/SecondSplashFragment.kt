@@ -21,6 +21,6 @@ class SecondSplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Handler(Looper.getMainLooper()).postDelayed({startActivity(Intent(requireActivity(), MainActivity::class.java))}, 1000)
+        Handler(Looper.getMainLooper()).postDelayed({startActivity(Intent(requireActivity(), MainActivity::class.java))}, 2000)
     }
 }

@@ -17,6 +17,7 @@ class LoginViewModel: ViewModel() {
                 if (it.isSuccessful) {
                     isSuccess.invoke()
                    SharedPreferences(getContext()).token = it.body()?.access_token
+                    SharedPreferences(getContext()).username=it.body()?.username
                 }
                 else
                     Toast.makeText(getContext(), "Неверный логин или пароль", Toast.LENGTH_SHORT).show()
