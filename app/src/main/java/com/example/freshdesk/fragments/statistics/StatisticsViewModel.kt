@@ -12,7 +12,7 @@ class StatisticsViewModel: ViewModel() {
 
     private val repository = MainRepository()
     var list=MutableLiveData<List<ReportMonthly>>()
-        fun monthlystatistic() {
+        fun monthlyStatistics() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.monthlyStatistics().let {
                 if(it.isSuccessful)

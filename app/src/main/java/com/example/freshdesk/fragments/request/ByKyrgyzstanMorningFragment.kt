@@ -14,34 +14,36 @@ import com.example.freshdesk.utils.alertDialog
 import com.example.freshdesk.utils.isNetworkConnected
 
 class ByKyrgyzstanMorningFragment : Fragment() {
-lateinit var databinding:ByKyrgyzstanMorningFragmentBinding
+    lateinit var databinding: ByKyrgyzstanMorningFragmentBinding
     private val viewModel by lazy { ByKyrgyzstanMorningViewModel() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        databinding= ByKyrgyzstanMorningFragmentBinding.inflate(inflater,container,false)
+        databinding = ByKyrgyzstanMorningFragmentBinding.inflate(inflater, container, false)
         return databinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        databinding.toolbar.title.text="На 09:00, Кыргызстан"
+        databinding.toolbar.title.text = "На 09:00, Кыргызстан"
         databinding.toolbar.imgBack.setOnClickListener {
             findNavController().navigate(R.id.requestFragment)
         }
         databinding.toolbar.exit.setOnClickListener {
             alertDialog(requireContext())
         }
-       checkInternet()
+        checkInternet()
     }
-   private fun setAdapter(){
-        viewModel.list.observe(viewLifecycleOwner){
+
+    private fun setAdapter() {
+        viewModel.list.observe(viewLifecycleOwner) {
             databinding.recyclerAgents.adapter = MorningKgAdapter(it)
 
         }
     }
+
     private fun checkInternet() {
         if (isNetworkConnected(requireContext())) {
             viewModel.agentsReport()

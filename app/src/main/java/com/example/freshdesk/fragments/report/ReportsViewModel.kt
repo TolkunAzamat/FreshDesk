@@ -8,15 +8,15 @@ import com.example.freshdesk.repository.MainRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ReportsViewModel:ViewModel() {
+class ReportsViewModel : ViewModel() {
     private val repository = MainRepository()
-   var list:MutableLiveData<ReportBreakDownByTicketsTypeReport> = MutableLiveData()
-    fun reports(){
+    var list: MutableLiveData<ReportBreakDownByTicketsTypeReport> = MutableLiveData()
+    fun reports() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.breakDnReport().let {
-                if(it.isSuccessful)
+                if (it.isSuccessful)
                     list.postValue(it.body())
             }
         }
     }
-    }
+}

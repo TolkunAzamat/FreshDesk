@@ -30,6 +30,5 @@ fun isNetworkConnected(context: Context): Boolean {
             }
         }
     }
-
     return true
 }

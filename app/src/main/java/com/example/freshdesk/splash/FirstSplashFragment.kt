@@ -15,24 +15,27 @@ import com.example.freshdesk.databinding.FragmentFirstSplashBinding
 import com.example.freshdesk.sharedPreferences.SharedPreferences
 
 class FirstSplashFragment : Fragment() {
-  private lateinit var databinding:FragmentFirstSplashBinding
-   override fun onCreateView(
+    private lateinit var databinding: FragmentFirstSplashBinding
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-       databinding= FragmentFirstSplashBinding.inflate(layoutInflater,container,false)
-       return databinding.root
+        databinding = FragmentFirstSplashBinding.inflate(layoutInflater, container, false)
+        return databinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-      var sharedPreferences=SharedPreferences(requireContext())
-        if (sharedPreferences.token!=null)
-        {
-            Handler(Looper.getMainLooper()).postDelayed({startActivity(Intent(requireActivity(), MainActivity::class.java))}, 2000)
+        var sharedPreferences = SharedPreferences(requireContext())
+        if (sharedPreferences.token != null) {
+            Handler(Looper.getMainLooper()).postDelayed({
+                startActivity(Intent(requireActivity(),
+                    MainActivity::class.java))
+            }, 2000)
 
         } else {
-            Handler(Looper.getMainLooper()).postDelayed({findNavController().navigate(R.id.action_firstSplashFragment_to_loginFragment)}, 1000)
+            Handler(Looper.getMainLooper()).postDelayed({ findNavController().navigate(R.id.action_firstSplashFragment_to_loginFragment) },
+                1000)
         }
     }
 }

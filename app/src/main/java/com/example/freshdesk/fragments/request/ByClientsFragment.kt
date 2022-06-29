@@ -43,7 +43,7 @@ class ByClientsFragment : Fragment() {
     }
     private fun checkInternet() {
         if (isNetworkConnected(requireContext())) {
-            viewModel.clientAndModule()
+            viewModel.clientsReports()
             setAdapter()
         } else Toast.makeText(requireContext(),
             "Отсутсвует подключение к интернету",

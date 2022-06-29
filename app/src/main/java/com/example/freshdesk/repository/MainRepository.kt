@@ -16,11 +16,11 @@ class MainRepository {
     suspend fun monthlyStatistics(): Response<List<ReportMonthly>> {
         return api.monthlyReports()
     }
-    suspend fun modularlyReports(): Response<List<ReportModularly>> {
-        return api.modularlyReports()
+    suspend fun moduleReports(): Response<List<ReportModularly>> {
+        return api.moduleReports()
     }
-    suspend fun clientAndModule():Response<List<ReportClientAndModule>>{
-        return api.clientAndModule()
+    suspend fun clientsReports():Response<List<ReportClientAndModule>>{
+        return api.clientsReports()
     }
     suspend fun agentsReports():Response<List<ReportByAgents>>{
         return api.agentsReports()

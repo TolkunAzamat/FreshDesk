@@ -11,9 +11,9 @@ import kotlinx.coroutines.launch
 class ByClientsViewModel:ViewModel() {
     private val repository = MainRepository()
     var list: MutableLiveData<List<ReportClientAndModule>> = MutableLiveData()
-    fun clientAndModule(){
+    fun clientsReports(){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.clientAndModule().let {
+            repository.clientsReports().let {
                 if(it.isSuccessful)
                     list.postValue(it.body())
             }

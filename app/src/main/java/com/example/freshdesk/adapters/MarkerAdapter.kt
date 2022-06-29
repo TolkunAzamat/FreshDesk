@@ -19,6 +19,7 @@ class MarkerAdapter(context: Context?, layoutResource: Int, private val nameMont
             month.text = nameMonth
         }
     }
+
     override fun getOffset(): MPPointF {
         return MPPointF(-width / 2f, -height.toFloat())
     }

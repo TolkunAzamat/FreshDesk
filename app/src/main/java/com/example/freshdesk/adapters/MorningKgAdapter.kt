@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.freshdesk.api.models.ReportByAgents
 import com.example.freshdesk.databinding.ItemMorningKgBinding
 
-class MorningKgAdapter(private val list: List<ReportByAgents>): RecyclerView.Adapter<MorningKgAdapter.ViewHolder>() {
+class MorningKgAdapter(private val list: List<ReportByAgents>) :
+    RecyclerView.Adapter<MorningKgAdapter.ViewHolder>() {
     class ViewHolder(val databinding: ItemMorningKgBinding) :
         RecyclerView.ViewHolder(databinding.root) {
     }
@@ -59,6 +60,7 @@ class MorningKgAdapter(private val list: List<ReportByAgents>): RecyclerView.Ada
             }
         }
     }
+
     override fun getItemCount(): Int {
         return list.size
     }

@@ -1,34 +1,29 @@
 package com.example.freshdesk.fragments.statistics
 
-import android.app.AlertDialog
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
 import com.example.freshdesk.R
 import com.example.freshdesk.adapters.MarkerAdapter
 import com.example.freshdesk.adapters.MonthStatisticsAdapter
 import com.example.freshdesk.api.models.ReportMonthly
 import com.example.freshdesk.databinding.FragmentStatisticsBinding
-import com.example.freshdesk.login.LoginActivity
-import com.example.freshdesk.sharedPreferences.SharedPreferences
 import com.example.freshdesk.utils.alertDialog
 import com.example.freshdesk.utils.isNetworkConnected
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
-import com.github.mikephil.charting.data.*
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.data.LineData
+import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
-import java.util.ArrayList
 
 class StatisticsFragment : Fragment(){
     private lateinit var databinding:FragmentStatisticsBinding
@@ -187,7 +182,7 @@ class StatisticsFragment : Fragment(){
     }
     private fun checkInternet() {
         if (isNetworkConnected(requireContext())) {
-            viewModel.monthlystatistic()
+            viewModel.monthlyStatistics()
             setAdapter()
         } else Toast.makeText(requireContext(),
             "Отсутсвует подключение к интернету",

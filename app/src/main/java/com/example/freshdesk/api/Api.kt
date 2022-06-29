@@ -17,9 +17,9 @@ interface Api {
     @GET("/api/Reports/GetJsonReportMonthly")//очет по месяцам
     suspend fun monthlyReports():Response<List<ReportMonthly>>
     @GET("/api/Reports/GetJsonReportModularly")//отчет по модулям
-    suspend fun modularlyReports():Response<List<ReportModularly>>
+    suspend fun moduleReports():Response<List<ReportModularly>>
     @GET("/api/Reports/GetJsonReportClientAndModule") //отчет по клиентам
-    suspend fun clientAndModule():Response<List<ReportClientAndModule>>
+    suspend fun clientsReports():Response<List<ReportClientAndModule>>
     @GET("/api/Reports/GetJsonReportInDynamic") //в динамике
     suspend fun dynamicReport():Response<List<ReportInDynamic>>
     @GET("/api/Reports/GetJsonReportByAgents") //заявки по агентам

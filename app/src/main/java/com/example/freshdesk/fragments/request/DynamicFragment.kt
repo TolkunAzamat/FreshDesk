@@ -20,26 +20,28 @@ class DynamicFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        databinding= DynamicFragmentBinding.inflate(inflater,container,false)
+        databinding = DynamicFragmentBinding.inflate(inflater, container, false)
         return databinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        databinding.toolbar.title.text="На 09:00, в динамике"
+        databinding.toolbar.title.text = "На 09:00, в динамике"
         databinding.toolbar.imgBack.setOnClickListener {
             findNavController().navigate(R.id.requestFragment)
         }
-       checkInternet()
+        checkInternet()
         databinding.toolbar.exit.setOnClickListener {
             alertDialog(requireContext())
         }
     }
-   private fun setAdapter() {
+
+    private fun setAdapter() {
         viewModel.list.observe(viewLifecycleOwner) {
-        databinding.recyclerDynamic.adapter=DynamicAdapter(it)
+            databinding.recyclerDynamic.adapter = DynamicAdapter(it)
         }
     }
+
     private fun checkInternet() {
         if (isNetworkConnected(requireContext())) {
             viewModel.reportInDynamic()
@@ -48,4 +50,4 @@ class DynamicFragment : Fragment() {
             "Отсутсвует подключение к интернету",
             Toast.LENGTH_SHORT).show()
     }
-   }
+}

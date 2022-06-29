@@ -28,7 +28,6 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 class ReportsFragment : Fragment() {
     private lateinit var databinding: FragmentReportsBinding
     private val viewModel by lazy { ReportsViewModel() }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -36,7 +35,6 @@ class ReportsFragment : Fragment() {
         databinding = FragmentReportsBinding.inflate(layoutInflater)
         return databinding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         databinding.toolbar.title.text = "Отчеты"
@@ -47,8 +45,6 @@ class ReportsFragment : Fragment() {
         onClick()
         onClickPie()
     }
-
-
     private fun setData() {
         viewModel.list.observe(viewLifecycleOwner) {
             setPieChart(it, databinding.pieChart)
@@ -90,9 +86,7 @@ class ReportsFragment : Fragment() {
 
         pieChart.setUsePercentValues(true)
         pieChart.centerText = "Разбивка\n по типам\n заявок"
-        pieChart.setCenterTextColor(Color.parseColor("#232630"))
         pieChart.setCenterTextSize(18f)
-
         pieChart.description.isEnabled = false
         pieChart.setTouchEnabled(true)
         pieChart.legend.isEnabled = false
