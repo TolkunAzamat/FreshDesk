@@ -12,7 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.freshdesk.MainActivity
 import com.example.freshdesk.R
 import com.example.freshdesk.databinding.FragmentFirstSplashBinding
-import com.example.freshdesk.sharedPreferences.SharedPreferences
+import com.example.freshdesk.utils.sharedPreferences.SharedPreferences
 
 class FirstSplashFragment : Fragment() {
     private lateinit var databinding: FragmentFirstSplashBinding

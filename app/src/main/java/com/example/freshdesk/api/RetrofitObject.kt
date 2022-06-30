@@ -1,7 +1,7 @@
 package com.example.freshdesk.api
 
 import com.example.freshdesk.App
-import com.example.freshdesk.sharedPreferences.SharedPreferences
+import com.example.freshdesk.utils.sharedPreferences.SharedPreferences
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

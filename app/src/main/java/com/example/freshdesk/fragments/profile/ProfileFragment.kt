@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.freshdesk.databinding.FragmentProfileBinding
-import com.example.freshdesk.sharedPreferences.SharedPreferences
+import com.example.freshdesk.utils.sharedPreferences.SharedPreferences
 import com.example.freshdesk.utils.alertDialog
 
 class ProfileFragment : Fragment() {

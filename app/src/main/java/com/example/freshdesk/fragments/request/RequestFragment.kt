@@ -1,7 +1,5 @@
 package com.example.freshdesk.fragments.request
 
-import android.app.AlertDialog
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,8 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.freshdesk.R
 import com.example.freshdesk.databinding.FragmentRequestBinding
-import com.example.freshdesk.login.LoginActivity
-import com.example.freshdesk.sharedPreferences.SharedPreferences
 import com.example.freshdesk.utils.alertDialog
 
 class RequestFragment : Fragment() {

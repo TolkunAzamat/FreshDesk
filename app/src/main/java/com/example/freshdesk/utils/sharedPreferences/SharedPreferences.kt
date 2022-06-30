@@ -1,4 +1,4 @@
-package com.example.freshdesk.sharedPreferences
+package com.example.freshdesk.utils.sharedPreferences
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -4,7 +4,7 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import com.example.freshdesk.login.LoginActivity
-import com.example.freshdesk.sharedPreferences.SharedPreferences
+import com.example.freshdesk.utils.sharedPreferences.SharedPreferences
 
 fun alertDialog(context: Context) {
     val builder = AlertDialog.Builder(context)

@@ -3,10 +3,9 @@ package com.example.freshdesk.login
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.freshdesk.App
 import com.example.freshdesk.App.Companion.getContext
 import com.example.freshdesk.repository.MainRepository
-import com.example.freshdesk.sharedPreferences.SharedPreferences
+import com.example.freshdesk.utils.sharedPreferences.SharedPreferences
 import kotlinx.coroutines.launch
 
 class LoginViewModel : ViewModel() {
