@@ -30,8 +30,5 @@ class ProfileFragment : Fragment() {
         databinding.cardExit.setOnClickListener {
             alertDialog(requireContext())
         }
-        databinding.profileImage.setOnClickListener {
-
-        }
     }
 }

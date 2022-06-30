@@ -24,6 +24,6 @@ class SecondSplashFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(requireActivity(),
                 MainActivity::class.java))
-        }, 2000)
+        }, 1500)
     }
 }

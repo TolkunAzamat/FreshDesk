@@ -11,9 +11,9 @@ fun alertDialog(context: Context) {
     builder.setTitle("Выйти")
     builder.setMessage("Хотите выйти?")
     builder.setIcon(android.R.drawable.ic_dialog_alert)
-    builder.setPositiveButton("Нет") { dialogInterface, which ->
+    builder.setNegativeButton("Нет") { _, _ ->
     }
-    builder.setNegativeButton("Да") { dialogInterface, which ->
+    builder.setPositiveButton("Да") { _, _ ->
         context.startActivity(Intent(context, LoginActivity::class.java))
         val shared = SharedPreferences(context)
         shared.clean()

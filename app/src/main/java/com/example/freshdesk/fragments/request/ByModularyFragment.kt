@@ -24,7 +24,6 @@ class ByModularyFragment : Fragment() {
         databinding = ByModularyFragmentBinding.inflate(inflater, container, false)
         return databinding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         databinding.toolbar.title.text = "Помодульно"

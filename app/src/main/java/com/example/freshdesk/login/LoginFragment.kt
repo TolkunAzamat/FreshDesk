@@ -19,7 +19,6 @@ class LoginFragment : Fragment() {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.toolbar.title.text = "Авторизация"
@@ -27,7 +26,6 @@ class LoginFragment : Fragment() {
             login()
         }
     }
-
     private fun login() {
         viewModel.login(binding.edLogin.text.toString(), binding.edPassword.text.toString()) {
             findNavController().navigate(R.id.action_loginFragment_to_secondSplashFragment)

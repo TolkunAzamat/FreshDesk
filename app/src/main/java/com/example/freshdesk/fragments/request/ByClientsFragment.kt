@@ -49,5 +49,4 @@ class ByClientsFragment : Fragment() {
             "Отсутсвует подключение к интернету",
             Toast.LENGTH_SHORT).show()
     }
-
 }

@@ -1,6 +1,7 @@
 package com.example.freshdesk.fragments.report
 
 import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -87,6 +88,7 @@ class ReportsFragment : Fragment() {
         pieChart.setUsePercentValues(true)
         pieChart.centerText = "Разбивка\n по типам\n заявок"
         pieChart.setCenterTextSize(18f)
+        pieChart.setCenterTextTypeface(Typeface.DEFAULT_BOLD)
         pieChart.description.isEnabled = false
         pieChart.setTouchEnabled(true)
         pieChart.legend.isEnabled = false
@@ -119,11 +121,9 @@ class ReportsFragment : Fragment() {
             changeColor(databinding.parametrization)
         }
     }
-
     private fun onClickPie() {
         databinding.pieChart.setOnChartValueSelectedListener(object : OnChartValueSelectedListener {
             override fun onValueSelected(e: Entry?, h: Highlight?) {
-                Log.e("TAG", "onValueSelected: ${h?.x}")
                 when (h?.x) {
                     0.0f -> changeColor(databinding.bugs)
                     1.0f -> changeColor(databinding.change)

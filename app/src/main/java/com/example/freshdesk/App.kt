@@ -8,7 +8,6 @@ class App : Application() {
         super.onCreate()
         instance = this
     }
-
     companion object {
         lateinit var instance: App
         fun getContext(): Context {

@@ -17,6 +17,7 @@ import com.example.freshdesk.utils.isNetworkConnected
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
@@ -32,19 +33,17 @@ class StatisticsFragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         databinding= FragmentStatisticsBinding.inflate(inflater,container,false)
         return databinding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         databinding.toolbar.title.text="Статистика"
-
         databinding.toolbar.exit.setOnClickListener {
             alertDialog(requireContext())}
         setClicks()
         checkInternet()
-
     }
     private fun setAdapter(){
         viewModel.list.observe(viewLifecycleOwner){
@@ -54,7 +53,6 @@ class StatisticsFragment : Fragment(){
         }
         adapter.setLine(databinding.lineChart)
     }
-
     private fun setClicks() {
         databinding.lineChart.setOnChartValueSelectedListener(object : OnChartValueSelectedListener {
             override fun onValueSelected(e: Entry?, h: Highlight?) {
@@ -62,7 +60,6 @@ class StatisticsFragment : Fragment(){
                 adapter.setPos(e?.x?.toInt(),h?.dataSetIndex)
                 adapter.notifyDataSetChanged()
             }
-
             override fun onNothingSelected() {
             }
         })
@@ -150,7 +147,6 @@ class StatisticsFragment : Fragment(){
         }
 
         val dataSets: ArrayList<ILineDataSet> = ArrayList()
-
         dataSets.clear()
         dataSets.let {
             it.add(error)
@@ -164,18 +160,19 @@ class StatisticsFragment : Fragment(){
             position = XAxis.XAxisPosition.BOTTOM
             granularity = 1f
             labelRotationAngle = 0f
+            textColor=Color.parseColor("#909090")
+            axisLineColor=Color.parseColor("#909090")
             valueFormatter = IndexAxisValueFormatter(statisticsMonthly)
-            isEnabled = false
+            isEnabled = true
         }
-
         lineChart.apply {
             setTouchEnabled(true)
             description.isEnabled = false
             legend.isEnabled = false
+            axisRight.isEnabled = false
             animateY(1400, Easing.EaseInOutElastic)
         }
-
-        val data = LineData(dataSets)
+       val data = LineData(dataSets)
         lineChart.data = data
         lineChart.notifyDataSetChanged()
         lineChart.invalidate()

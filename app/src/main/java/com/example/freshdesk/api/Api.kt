@@ -12,17 +12,17 @@ interface Api {
         @Query("username") username: String,
         @Query("password") password: String
     ): Response<Token>
-    @GET("/api/Reports/GetJsonReportBreakDownByTicketsTypeReport")// Разбивка отчетов по типам заявок
+    @GET("/api/Reports/GetJsonReportBreakDownByTicketsTypeReport")
     suspend fun reports():Response<ReportBreakDownByTicketsTypeReport>
-    @GET("/api/Reports/GetJsonReportMonthly")//очет по месяцам
+    @GET("/api/Reports/GetJsonReportMonthly")
     suspend fun monthlyReports():Response<List<ReportMonthly>>
-    @GET("/api/Reports/GetJsonReportModularly")//отчет по модулям
+    @GET("/api/Reports/GetJsonReportModularly")
     suspend fun moduleReports():Response<List<ReportModularly>>
-    @GET("/api/Reports/GetJsonReportClientAndModule") //отчет по клиентам
+    @GET("/api/Reports/GetJsonReportClientAndModule")
     suspend fun clientsReports():Response<List<ReportClientAndModule>>
-    @GET("/api/Reports/GetJsonReportInDynamic") //в динамике
+    @GET("/api/Reports/GetJsonReportInDynamic")
     suspend fun dynamicReport():Response<List<ReportInDynamic>>
-    @GET("/api/Reports/GetJsonReportByAgents") //заявки по агентам
+    @GET("/api/Reports/GetJsonReportByAgents")
     suspend fun agentsReports():Response<List<ReportByAgents>>
 
 }

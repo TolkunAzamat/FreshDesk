@@ -31,11 +31,10 @@ class FirstSplashFragment : Fragment() {
             Handler(Looper.getMainLooper()).postDelayed({
                 startActivity(Intent(requireActivity(),
                     MainActivity::class.java))
-            }, 2000)
-
+            }, 1500)
         } else {
             Handler(Looper.getMainLooper()).postDelayed({ findNavController().navigate(R.id.action_firstSplashFragment_to_loginFragment) },
-                1000)
+                1500)
         }
     }
 }

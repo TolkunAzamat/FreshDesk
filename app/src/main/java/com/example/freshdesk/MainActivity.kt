@@ -57,11 +57,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun showBottomNav() {
         databinding.cardView.visibility = View.VISIBLE
     }
-
     private fun hideBottomNav() {
         databinding.cardView.visibility = View.GONE
     }

@@ -12,7 +12,6 @@ import com.github.mikephil.charting.charts.LineChart
 class MonthStatisticsAdapter : RecyclerView.Adapter<MonthStatisticsAdapter.ViewHolder>() {
     class ViewHolder(val databinding: ItemMonthRecyclerBinding) :
         RecyclerView.ViewHolder(databinding.root) {}
-
     private var list: List<ReportMonthly> = mutableListOf()
     private var positions: Int? = null
     private var index: Int? = null
@@ -50,7 +49,6 @@ class MonthStatisticsAdapter : RecyclerView.Adapter<MonthStatisticsAdapter.ViewH
             holder.databinding.totalCard,
             holder.databinding.doneCard,
             holder.databinding.differenceCard)
-
         holder.databinding.let {
             it.month.text = item.nameOfMonth
             it.bug.text = item.countOfCreatedTicketsWithTypeError.toString()
@@ -58,6 +56,7 @@ class MonthStatisticsAdapter : RecyclerView.Adapter<MonthStatisticsAdapter.ViewH
             it.total.text = item.countOfCreatedTickets.toString()
             it.done.text = item.countOfClosedTicketsInThisMonth.toString()
             it.difference.text = item.difference.toString()
+
             onClick(it.bugCard, 0, position)
             onClick(it.otherCard, 1, position)
             onClick(it.totalCard, 2, position)
@@ -66,21 +65,11 @@ class MonthStatisticsAdapter : RecyclerView.Adapter<MonthStatisticsAdapter.ViewH
 
             if (positions == position) {
                 when (index) {
-                    0 -> {
-                        changeColor(it.bugCard, "#EC5555", cards)
-                    }
-                    1 -> {
-                        changeColor(it.otherCard, "#96CCE4", cards)
-                    }
-                    2 -> {
-                        changeColor(it.totalCard, "#FFC869", cards)
-                    }
-                    3 -> {
-                        changeColor(it.doneCard, "#84CD78", cards)
-                    }
-                    4 -> {
-                        changeColor(it.differenceCard, "#4560FF", cards)
-                    }
+                    0 -> changeColor(it.bugCard, "#EC5555", cards)
+                    1 ->changeColor(it.otherCard, "#96CCE4", cards)
+                    2 ->changeColor(it.totalCard, "#FFC869", cards)
+                    3 ->changeColor(it.doneCard, "#84CD78", cards)
+                    4 ->changeColor(it.differenceCard, "#4560FF", cards)
                 }
             } else {
                 for (i in cards) {

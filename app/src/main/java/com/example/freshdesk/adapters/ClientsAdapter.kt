@@ -18,7 +18,6 @@ class ClientsAdapter(private val list: List<ReportClientAndModule>) :
         val binding = ItemByClientsBinding.inflate(inflater, parent, false)
         return ViewHolder(binding)
     }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
         holder.databinding.let {
