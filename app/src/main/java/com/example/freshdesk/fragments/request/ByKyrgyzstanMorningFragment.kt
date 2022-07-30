@@ -36,12 +36,14 @@ class ByKyrgyzstanMorningFragment : Fragment() {
         }
         checkInternet()
     }
+
     private fun setAdapter() {
         viewModel.list.observe(viewLifecycleOwner) {
             databinding.recyclerAgents.adapter = MorningKgAdapter(it)
 
         }
     }
+
     private fun checkInternet() {
         if (isNetworkConnected(requireContext())) {
             viewModel.agentsReport()

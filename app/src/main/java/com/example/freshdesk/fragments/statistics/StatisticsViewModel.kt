@@ -8,14 +8,13 @@ import com.example.freshdesk.repository.MainRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class StatisticsViewModel: ViewModel() {
-
+class StatisticsViewModel : ViewModel() {
     private val repository = MainRepository()
-    var list=MutableLiveData<List<ReportMonthly>>()
-        fun monthlyStatistics() {
+    var list = MutableLiveData<List<ReportMonthly>>()
+    fun monthlyStatistics() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.monthlyStatistics().let {
-                if(it.isSuccessful)
+                if (it.isSuccessful)
                     list.postValue(it.body())
             }
         }

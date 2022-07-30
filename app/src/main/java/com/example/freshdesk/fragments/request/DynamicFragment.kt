@@ -23,6 +23,7 @@ class DynamicFragment : Fragment() {
         databinding = DynamicFragmentBinding.inflate(inflater, container, false)
         return databinding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         databinding.toolbar.title.text = "На 09:00, в динамике"

@@ -9,6 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitObject {
     fun retrofitModule(): Api {
+
         val authToken = SharedPreferences(App.getContext()).token
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)

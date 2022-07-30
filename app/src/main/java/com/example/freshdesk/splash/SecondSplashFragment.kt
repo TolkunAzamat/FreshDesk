@@ -10,13 +10,16 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.freshdesk.MainActivity
 import com.example.freshdesk.R
+import com.example.freshdesk.databinding.FragmentSecondSplashBinding
 
 class SecondSplashFragment : Fragment() {
+    private lateinit var databinding:FragmentSecondSplashBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        return inflater.inflate(R.layout.fragment_second_splash, container, false)
+        databinding= FragmentSecondSplashBinding.inflate(layoutInflater)
+        return databinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,5 +28,6 @@ class SecondSplashFragment : Fragment() {
             startActivity(Intent(requireActivity(),
                 MainActivity::class.java))
         }, 1500)
+        databinding.toolbar1.title.text="Авторизация"
     }
 }

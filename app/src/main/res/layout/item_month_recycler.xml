@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <androidx.cardview.widget.CardView
-            android:layout_width="48dp"
+            android:layout_width="52dp"
             android:layout_height="24dp"
             app:cardCornerRadius="4dp"
             app:cardElevation="0dp"
@@ -24,7 +24,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/bugCard"
-            android:layout_width="48dp"
+            android:layout_width="52dp"
             android:layout_height="24dp"
             android:layout_marginTop="8dp"
             app:cardCornerRadius="8dp"
@@ -40,7 +40,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/otherCard"
-            android:layout_width="48dp"
+            android:layout_width="52dp"
             android:layout_height="24dp"
             android:layout_marginTop="8dp"
             app:cardCornerRadius="8dp"
@@ -57,7 +57,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/totalCard"
-            android:layout_width="48dp"
+            android:layout_width="52dp"
             android:layout_height="24dp"
             android:layout_marginTop="8dp"
             android:gravity="center"
@@ -74,7 +74,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/doneCard"
-            android:layout_width="48dp"
+            android:layout_width="52dp"
             android:layout_height="24dp"
             android:layout_marginTop="8dp"
             android:gravity="center"
@@ -91,7 +91,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/differenceCard"
-            android:layout_width="48dp"
+            android:layout_width="52dp"
             android:layout_height="24dp"
             android:layout_marginTop="8dp"
             android:gravity="center"

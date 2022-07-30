@@ -26,45 +26,54 @@ import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 
-class StatisticsFragment : Fragment(){
-    private lateinit var databinding:FragmentStatisticsBinding
+class StatisticsFragment : Fragment() {
+    private lateinit var databinding: FragmentStatisticsBinding
     private val viewModel by lazy { StatisticsViewModel() }
     private val adapter by lazy { MonthStatisticsAdapter() }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        databinding= FragmentStatisticsBinding.inflate(inflater,container,false)
+        databinding = FragmentStatisticsBinding.inflate(inflater, container, false)
         return databinding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        databinding.toolbar.title.text="Статистика"
+        databinding.toolbar.title.text = "Статистика"
         databinding.toolbar.exit.setOnClickListener {
-            alertDialog(requireContext())}
+            alertDialog(requireContext())
+        }
         setClicks()
         checkInternet()
     }
-    private fun setAdapter(){
-        viewModel.list.observe(viewLifecycleOwner){
+
+    private fun setAdapter() {
+        viewModel.list.observe(viewLifecycleOwner) {
             adapter.setList(it)
-            databinding.recyclerMonth.adapter= adapter
+            databinding.recyclerMonth.adapter = adapter
             it?.let { it1 -> setLineChart(databinding.lineChart, it1) }
-        }
+       }
         adapter.setLine(databinding.lineChart)
     }
+
     private fun setClicks() {
-        databinding.lineChart.setOnChartValueSelectedListener(object : OnChartValueSelectedListener {
+        databinding.lineChart.setOnChartValueSelectedListener(object :
+            OnChartValueSelectedListener {
             override fun onValueSelected(e: Entry?, h: Highlight?) {
-                databinding.lineChart.marker = MarkerAdapter(requireContext(), R.layout.markerview, adapter.getMonth(e?.x?.toInt()!!))
-                adapter.setPos(e?.x?.toInt(),h?.dataSetIndex)
+                databinding.lineChart.marker = MarkerAdapter(requireContext(),
+                    R.layout.markerview,
+                    adapter.getMonth(e?.x?.toInt()!!))
+                adapter.setPos(e?.x?.toInt(), h?.dataSetIndex)
                 adapter.notifyDataSetChanged()
             }
+
             override fun onNothingSelected() {
             }
         })
     }
-   private fun setLineChart(lineChart: LineChart, response: List<ReportMonthly>) {
+
+    private fun setLineChart(lineChart: LineChart, response: List<ReportMonthly>) {
         val statisticsMonthly = ArrayList<String>()
         val statisticsError = ArrayList<Entry>()
         val statisticsOther = ArrayList<Entry>()
@@ -93,13 +102,13 @@ class StatisticsFragment : Fragment(){
 
         error.apply {
             lineWidth = 2f
-            setColor(Color.parseColor("#EC5555"))
+            color=(Color.parseColor("#EC5555"))
             setDrawCircles(true)
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#EC5555"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 8f
-            circleHoleRadius = 6f
+            circleRadius = 5f
+            circleHoleRadius = 3f
         }
 
         other.apply {
@@ -109,8 +118,8 @@ class StatisticsFragment : Fragment(){
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#96CCE4"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 8f
-            circleHoleRadius = 6f
+            circleRadius = 5f
+            circleHoleRadius = 3f
         }
 
         total.apply {
@@ -120,8 +129,8 @@ class StatisticsFragment : Fragment(){
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#FFC869"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 8f
-            circleHoleRadius = 6f
+            circleRadius = 5f
+            circleHoleRadius = 3f
         }
 
         closed.apply {
@@ -131,8 +140,8 @@ class StatisticsFragment : Fragment(){
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#84CD78"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 8f
-            circleHoleRadius = 6f
+            circleRadius = 5f
+            circleHoleRadius = 3f
         }
 
         difference.apply {
@@ -142,8 +151,8 @@ class StatisticsFragment : Fragment(){
             setDrawCircleHole(true)
             setCircleColor(Color.parseColor("#4560FF"))
             circleHoleColor = Color.parseColor("#FFFFFF")
-            circleRadius = 8f
-            circleHoleRadius = 6f
+            circleRadius = 5f
+            circleHoleRadius = 3f
         }
 
         val dataSets: ArrayList<ILineDataSet> = ArrayList()
@@ -160,8 +169,8 @@ class StatisticsFragment : Fragment(){
             position = XAxis.XAxisPosition.BOTTOM
             granularity = 1f
             labelRotationAngle = 0f
-            textColor=Color.parseColor("#909090")
-            axisLineColor=Color.parseColor("#909090")
+            textColor = Color.parseColor("#909090")
+            axisLineColor = Color.parseColor("#909090")
             valueFormatter = IndexAxisValueFormatter(statisticsMonthly)
             isEnabled = true
         }
@@ -172,11 +181,12 @@ class StatisticsFragment : Fragment(){
             axisRight.isEnabled = false
             animateY(1400, Easing.EaseInOutElastic)
         }
-       val data = LineData(dataSets)
+        val data = LineData(dataSets)
         lineChart.data = data
         lineChart.notifyDataSetChanged()
         lineChart.invalidate()
     }
+
     private fun checkInternet() {
         if (isNetworkConnected(requireContext())) {
             viewModel.monthlyStatistics()

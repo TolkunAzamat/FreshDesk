@@ -79,6 +79,7 @@ class ReportsFragment : Fragment() {
         set.colors = colors
         set.sliceSpace = 7f
         set.selectionShift = 10f
+        set.setAutomaticallyDisableSliceSpacing(true)
         val data = PieData(set)
         data.setDrawValues(true)
         data.setValueFormatter(PercentFormatter(pieChart))
@@ -92,7 +93,7 @@ class ReportsFragment : Fragment() {
         pieChart.description.isEnabled = false
         pieChart.setTouchEnabled(true)
         pieChart.legend.isEnabled = false
-        pieChart.animateY(1400, Easing.EaseInOutQuad)
+        pieChart.animateY(1400, Easing.EaseInCirc)
         pieChart.data = data
         pieChart.invalidate()
     }
@@ -103,7 +104,7 @@ class ReportsFragment : Fragment() {
             changeColor(databinding.bugs)
         }
         databinding.change.setOnClickListener {
-            databinding.pieChart.highlightValue(1f, 0, true)
+            databinding.pieChart.highlightValue(1f,0 , true)
             changeColor(databinding.change)
         }
         databinding.request.setOnClickListener {
@@ -132,9 +133,7 @@ class ReportsFragment : Fragment() {
                     4.0f -> changeColor(databinding.parametrization)
                 }
             }
-
             override fun onNothingSelected() {}
-
         })
     }
 

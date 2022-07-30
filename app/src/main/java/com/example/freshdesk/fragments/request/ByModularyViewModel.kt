@@ -11,10 +11,10 @@ import kotlinx.coroutines.launch
 class ByModularyViewModel : ViewModel() {
     private val repository = MainRepository()
     var list: MutableLiveData<List<ReportModularly>> = MutableLiveData()
-    fun moduleReports(){
+    fun moduleReports() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.moduleReports().let {
-                if(it.isSuccessful)
+                if (it.isSuccessful)
                     list.postValue(it.body())
             }
         }

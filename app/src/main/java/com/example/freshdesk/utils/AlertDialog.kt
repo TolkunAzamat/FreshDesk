@@ -10,7 +10,6 @@ fun alertDialog(context: Context) {
     val builder = AlertDialog.Builder(context)
     builder.setTitle("Выйти")
     builder.setMessage("Хотите выйти?")
-    builder.setIcon(android.R.drawable.ic_dialog_alert)
     builder.setNegativeButton("Нет") { _, _ ->
     }
     builder.setPositiveButton("Да") { _, _ ->

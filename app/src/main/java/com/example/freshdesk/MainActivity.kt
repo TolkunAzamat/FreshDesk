@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.container)
         databinding.reportBtn.setOnClickListener {
-            navController.popBackStack(R.id.reportsFragment, true)
+            navController.popBackStack(R.id.reportsFragment,true)
             navController.navigate(R.id.reportsFragment)
         }
         databinding.requestBtn.setOnClickListener {

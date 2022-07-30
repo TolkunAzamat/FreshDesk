@@ -11,18 +11,18 @@ import com.example.freshdesk.databinding.FragmentRequestBinding
 import com.example.freshdesk.utils.alertDialog
 
 class RequestFragment : Fragment() {
-    private lateinit var databinding:FragmentRequestBinding
-   override fun onCreateView(
+    private lateinit var databinding: FragmentRequestBinding
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-       databinding= FragmentRequestBinding.inflate(layoutInflater,container,false)
-       return databinding.root
+        databinding = FragmentRequestBinding.inflate(layoutInflater, container, false)
+        return databinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-    databinding.toolbar.title.text="Заявки"
+        databinding.toolbar.title.text = "Заявки"
         databinding.byModule.setOnClickListener {
             findNavController().navigate(R.id.byModularyFragment)
         }

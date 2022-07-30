@@ -12,10 +12,10 @@ class ByKyrgyzstanMorningViewModel : ViewModel() {
     private val repository = MainRepository()
     var list: MutableLiveData<List<ReportByAgents>> = MutableLiveData()
 
-    fun agentsReport(){
+    fun agentsReport() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.agentsReports().let {
-                if(it.isSuccessful)
+                if (it.isSuccessful)
                     list.postValue(it.body())
             }
         }

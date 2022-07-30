@@ -12,10 +12,10 @@ class DynamicViewModel : ViewModel() {
     private val repository = MainRepository()
     var list: MutableLiveData<List<ReportInDynamic>> = MutableLiveData()
 
-    fun reportInDynamic(){
+    fun reportInDynamic() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.dynamicReport().let {
-                if(it.isSuccessful)
+                if (it.isSuccessful)
                     list.postValue(it.body())
             }
         }
